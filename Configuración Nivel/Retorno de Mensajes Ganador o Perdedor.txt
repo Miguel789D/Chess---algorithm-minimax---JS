@@ -1,0 +1,16 @@
+qui.js:
+
+	if(InCheck == BOOL.TRUE) {
+		if(GameBoard.side == COLOURS.WHITE) {
+	      $("#GameStatus").text("GAME OVER {black mates} recuerda que puedes jugar otra partida en cualquier otro nivel en 24 horas");
+	      return BOOL.TRUE;
+        } else {
+	      $("#GameStatus").text("GAME OVER {white mates} ¡Felicitaciones has ganado la partida! reclama tu premio enviando el codigo de tu partida por WhatsApp al numero 988575588 ");
+	      return BOOL.TRUE;
+        }
+	} else {
+		$("#GameStatus").text("GAME DRAWN {stalemate}");return BOOL.TRUE;
+	}
+	
+	return BOOL.FALSE;	
+}

@@ -1,0 +1,19 @@
+Evaluate.js:
+
+Linea 46
+BishopPair: 22;
+
+
+Searc.js:
+
+Linea202 cambiamos el currentDepth por:
+for( currentDepth = 1; currentDepth <= Math.min(SearchController.depth, 3); ++currentDepth) {
+
+Search:
+En la linea 226 agregamos:
+if (Math.random() < 0.1) { // 10% de las veces
+        GenerateMoves();
+        var randomIndex = Math.floor(Math.random() * GameBoard.moveListStart[GameBoard.ply+1]);
+        bestMove = GameBoard.moveList[randomIndex];
+    }
+
